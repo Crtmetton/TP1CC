@@ -1,19 +1,17 @@
 const romanNumerals = [
-  { value: 10, symbol: "X" },
-  { value: 9, symbol: "IX" },
-  { value: 5, symbol: "V" },
-  { value: 4, symbol: "IV" },
-  { value: 3, symbol: "III" },
-  { value: 2, symbol: "II" },
-  { value: 1, symbol: "I" },
+  { value: 9, symbol: 'IX' },
+  { value: 8, symbol: 'VIII' },
+  { value: 7, symbol: 'VII' },
+  { value: 6, symbol: 'VI' },
+  { value: 4, symbol: 'IV' },
+  { value: 3, symbol: 'III' },
+  { value: 2, symbol: 'II' },
+  { value: 1, symbol: 'I' },
 ];
 
 function toRoman(n) {
-  if (n === 1) return 'I';
-  if (n === 2) return 'II';
-  if (n === 3) return 'III';
-  if (n === 4) return 'IV';
-  if (n === 9) return 'IX';
+  const match = romanNumerals.find(item => item.value === n);
+  if (match) return match.symbol;
   throw new Error('Invalid');
 }
 

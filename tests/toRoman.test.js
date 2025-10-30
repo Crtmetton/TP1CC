@@ -17,4 +17,13 @@ describe('toRoman', () => {
   it('Should return IX when input is 9', () => {
     expect(toRoman(9)).toBe('IX');
   });
+  it('Should return VI when input is 6', () => {
+    expect(toRoman(6)).toBe('VI');
+  });
+  it('Should return VII when input is 7', () => {
+    expect(toRoman(7)).toBe('VII');
+  });
+  it('Should return VIII when input is 8', () => {
+    expect(toRoman(8)).toBe('VIII');
+  });
 });
