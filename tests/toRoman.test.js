@@ -26,6 +26,9 @@ describe('toRoman', () => {
   it('Should return VIII when input is 8', () => {
     expect(toRoman(8)).toBe('VIII');
   });
+  it('Should return XL when input is 40', () => {
+    expect(toRoman(40)).toBe('XL');
+  });
 
   //@RED TESTS
   it('Should throw error when input is 0', () => {
@@ -36,12 +39,12 @@ describe('toRoman', () => {
     expect(() => toRoman(-1)).toThrow('Invalid');
   });
 
-  it('Should throw error when input is greater than 9', () => {
-    expect(() => toRoman(10)).toThrow('Invalid');
+  it('Should throw error when input is greater than 999', () => {
+    expect(() => toRoman(1000)).toThrow('Invalid');
   });
 
-  it('Should throw error when input is 100', () => {
-    expect(() => toRoman(100)).toThrow('Invalid');
+  it('Should throw error when input is 1000', () => {
+    expect(() => toRoman(1000)).toThrow('Invalid');
   });
 
   it('Should throw error when input is a decimal number', () => {
