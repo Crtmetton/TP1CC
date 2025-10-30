@@ -1,7 +1,7 @@
 const { toRoman } = require('../src/toRoman');
 
 describe('toRoman', () => {
-  // GREEN TESTS
+  //@GREEN TESTS
   it('Should return I when input is 1', () => {
     expect(toRoman(1)).toBe('I');
   });
@@ -25,5 +25,38 @@ describe('toRoman', () => {
   });
   it('Should return VIII when input is 8', () => {
     expect(toRoman(8)).toBe('VIII');
+  });
+
+  //@RED TESTS
+  it('Should throw error when input is 0', () => {
+    expect(() => toRoman(0)).toThrow('Invalid');
+  });
+
+  it('Should throw error when input is negative', () => {
+    expect(() => toRoman(-1)).toThrow('Invalid');
+  });
+
+  it('Should throw error when input is greater than 9', () => {
+    expect(() => toRoman(10)).toThrow('Invalid');
+  });
+
+  it('Should throw error when input is 100', () => {
+    expect(() => toRoman(100)).toThrow('Invalid');
+  });
+
+  it('Should throw error when input is a decimal number', () => {
+    expect(() => toRoman(3.5)).toThrow('Invalid');
+  });
+
+  it('Should throw error when input is a string', () => {
+    expect(() => toRoman('5')).toThrow('Invalid');
+  });
+
+  it('Should throw error when input is undefined', () => {
+    expect(() => toRoman(undefined)).toThrow('Invalid');
+  });
+
+  it('Should throw error when input is null', () => {
+    expect(() => toRoman(null)).toThrow('Invalid');
   });
 });
