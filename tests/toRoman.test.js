@@ -11,4 +11,10 @@ describe('toRoman', () => {
   it('Should return III when input is 3', () => {
     expect(toRoman(3)).toBe('III');
   });
+  it('Should return IV when input is 4', () => {
+    expect(toRoman(4)).toBe('IV');
+  });
+  it('Should return IX when input is 9', () => {
+    expect(toRoman(9)).toBe('IX');
+  });
 });
